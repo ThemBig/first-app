@@ -16,7 +16,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun toastMe(view: View) {
-        val myToast = Toast.makeText(this, "Hello Toast", Toast.LENGTH_SHORT)
+        val showCountTextView = findViewById<TextView>(R.id.textView)
+        val countString = showCountTextView.text.toString()
+        var count: Int = Integer.parseInt(countString)
+        val myToast = Toast.makeText(this, "Count Number is : " + count, Toast.LENGTH_SHORT)
         myToast.show()
     }
 
